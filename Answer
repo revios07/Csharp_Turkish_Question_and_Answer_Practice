@@ -1,0 +1,51 @@
+class Program
+    {
+        static void Main(string[] args)
+        {
+            //Switch case yapısı kullanarak basit bir hesap makinesi yapınız :)
+            double number1, number2;
+            Console.WriteLine("Selamlar efenim hesap makinesine hoş geldiniz");
+         
+
+            
+
+            bool quit = false;
+            while (quit == false)
+            {
+                Console.Write("İlk sayıyı giriniz = ");
+                number1 = Convert.ToDouble(Console.ReadLine());
+                Console.Write("İkinci sayıyı giriniz = ");
+                number2 = Convert.ToDouble(Console.ReadLine());
+
+                Console.Write("Yapmak istediğiniz işlemi giriniz = ");
+                string işlem = Console.ReadLine();
+
+                switch (işlem)
+                {
+                    case "+":
+                        Console.WriteLine("Toplamları  = " + number1 + number2);
+                        break;
+                    case "-":
+                        Console.WriteLine("Farkları = " + (number1 - number2));
+                        break;
+                    case "/":
+                        Console.WriteLine("Bölümleri = " + number1 / number2);
+                        break;
+                    case "*":
+                        Console.WriteLine("Çarpımları = " + number1 * number2);
+                        break;
+                    default:
+                        Console.WriteLine("Bunlarla nabalım agaaa");
+                        break;
+                }
+                Console.WriteLine("Çıkmak için quit yazınız entera basınız devamsa herhangi bir tuşa basınız :)");
+                string exit = Console.ReadLine();
+                if(exit == "quit")
+                {
+                    quit = true;
+                }
+            }
+
+
+        }
+    }
